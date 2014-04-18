@@ -11,6 +11,8 @@
 /bin/
 /composer.phar
 web/css/*
+!web/css/bab9907_mopabootstrapbundle_1.css
+!web/css/bab9907.css
 web/js/*
 
 ## generic files to ignore
