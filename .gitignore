@@ -6,7 +6,8 @@
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /build/
-/vendor/
+/vendor/*
+!/vendor/.gitkeep
 /bin/
 /composer.phar
 web/css/*
