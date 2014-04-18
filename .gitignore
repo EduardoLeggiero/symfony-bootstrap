@@ -30,6 +30,7 @@ nbproject/
 .buildpath
 .project
 .settings/
+*.launch
 
 # envvars
 bin/envvars
