@@ -16,7 +16,16 @@ $loader->register(true);
 require_once __DIR__.'/../app/AppKernel.php';
 //require_once __DIR__.'/../app/AppCache.php';
 
-$kernel = new AppKernel('prod', false);
+defined('APPLICATION_ENV')
+    || define('APPLICATION_ENV', getenv('APPLICATION_ENV') ?: 'production');
+
+// Map Zend APPLICATION_ENV to Symfony Kernel Environment
+$env = (APPLICATION_ENV === 'staging')      ? 'stage'
+     : (APPLICATION_ENV === 'testing')      ? 'test'
+     : (APPLICATION_ENV === 'development')  ? 'dev'
+     : 'prod';
+
+$kernel = new AppKernel($env, $env != 'prod');
 $kernel->loadClassCache();
 //$kernel = new AppCache($kernel);
 $request = Request::createFromGlobals();
