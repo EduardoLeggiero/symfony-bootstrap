@@ -12,6 +12,7 @@
 /composer.phar
 web/css/*
 web/js/*
+/.rsync_cache/
 
 ## generic files to ignore
 *~
